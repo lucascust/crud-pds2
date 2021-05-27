@@ -1,9 +1,12 @@
 import { Router } from 'express';
+import usersRouter from './users.routes';
 
 const routes = Router();
 
-routes.get('/', (request, response) => {
-  return response.json({ message: 'hello world' });
+routes.post('/ping', (req, res) => {
+	res.send('pong');
 });
+
+routes.use('/users', usersRouter);
 
 export default routes;
