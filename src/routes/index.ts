@@ -1,9 +1,10 @@
 import { Router } from 'express';
 import usersRouter from './users.routes';
 
+
 const routes = Router();
 
-routes.post('/ping', (req, res) => {
+routes.get('/ping', (req, res) => {
 	res.send('pong');
 });
 
